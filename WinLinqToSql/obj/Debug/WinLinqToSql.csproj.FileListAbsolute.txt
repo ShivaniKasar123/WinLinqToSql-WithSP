@@ -1,0 +1,11 @@
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\bin\Debug\WinLinqToSql.exe.config
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\bin\Debug\WinLinqToSql.exe
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\bin\Debug\WinLinqToSql.pdb
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\obj\Debug\WinLinqToSql.csproj.AssemblyReference.cache
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\obj\Debug\WinLinqToSql.csproj.SuggestedBindingRedirects.cache
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\obj\Debug\WinLinqToSql.Form1.resources
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\obj\Debug\WinLinqToSql.Properties.Resources.resources
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\obj\Debug\WinLinqToSql.csproj.GenerateResource.cache
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\obj\Debug\WinLinqToSql.csproj.CoreCompileInputs.cache
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\obj\Debug\WinLinqToSql.exe
+C:\Users\SK69961\source\repos\WinLinqToSql\WinLinqToSql\obj\Debug\WinLinqToSql.pdb

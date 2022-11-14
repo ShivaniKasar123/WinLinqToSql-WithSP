@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EmployeerDetails" Class="empDataClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=POOLW42SLPC6628;Initial Catalog=EmployeerDetails;Integrated Security=True" SettingsObjectName="WinLinqToSql.Properties.Settings" SettingsPropertyName="EmployeerDetailsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblDepartment" Member="tblDepartments">
+    <Type Name="tblDepartment">
+      <Column Name="DeptId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeptName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="tblDepartment_tblEmployee" Member="tblEmployees" ThisKey="DeptId" OtherKey="DeptId" Type="tblEmployee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblEmployee" Member="tblEmployees">
+    <Type Name="tblEmployee">
+      <Column Name="EmpNo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EmpSalary" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DeptId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblDepartment_tblEmployee" Member="tblDepartment" ThisKey="DeptId" OtherKey="DeptId" Type="tblDepartment" IsForeignKey="true" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId1">
+      <Argument Parameter="empName" Member="EmpName" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId2">
+      <Argument Parameter="empNo" Member="EmpNo" />
+      <Argument Parameter="empName" Member="EmpName" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId3">
+      <Argument Parameter="empNo" Member="EmpNo" />
+    </DeleteFunction>
+  </Table>
+  <Function Id="FunctionId1" Name="dbo.sp_InsertEmp" Method="sp_InsertEmp">
+    <Parameter Name="empName" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="empSal" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId2" Name="dbo.sp_UpdateEmp" Method="sp_UpdateEmp">
+    <Parameter Name="empNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="empName" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="empSal" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId3" Name="dbo.sp_DeleteEmp" Method="sp_DeleteEmp">
+    <Parameter Name="empNo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_tblEmployee" Method="sp_tblEmployee">
+    <ElementType Name="sp_tblEmployeeResult">
+      <Column Name="EmpNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmpName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EmpSalary" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DeptId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
